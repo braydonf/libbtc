@@ -56,7 +56,7 @@ void test_bip32()
     /* [Chain m/44'/0'/0'/0/0'] */
     char path0[] = "m/44'/0'/0'/0/0'";
     btc_hd_generate_key(&node, path0, private_key_master, chain_code_master, false);
-    //TODO u_assert_int_eq(node.fingerprint, -1294457973);
+    u_assert_int_eq(node.fingerprint, 979405993); // parent fingerprint
     u_assert_mem_eq(node.chain_code,
                     utils_hex_to_uint8("7a16b2f4ad4cc1069338237f373dabf1fe329a5f3a0d95c4b98d061204676293"),
                     32);
